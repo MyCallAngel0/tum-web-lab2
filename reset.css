@@ -1,0 +1,44 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button, input {
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional resets for consistency */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
