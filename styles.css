@@ -29,6 +29,18 @@ nav a {
     justify-content: center;
     align-items: center;
     color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Increase the size of the main heading */
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Increase the size of the paragraph */
+    margin-bottom: 20px;
 }
 
 .cta-button {
@@ -38,6 +50,96 @@ nav a {
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #cc5200;
+}
+
+.hero .text-container {
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#why-choose-us {
+    background: url('https://www.example.com/your-image.jpg') no-repeat center center/cover;
+    background-color: #f2e2c4; /* Soft beige color for a warm tone */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    background-size: cover;
+    position: relative;
+}
+
+#why-choose-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 240, 178, 0.6); /* Warm golden overlay to match the theme */
+    z-index: 1;
+}
+
+.why-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#why-choose-us h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #fc893d;
+    font-weight: bold;
+}
+
+.why-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.why-item h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fc893d;
+}
+
+.why-item p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #6c6666;
+}
+
+@media (max-width: 768px) {
+    #why-choose-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .why-item {
+        padding: 20px;
+    }
+
+    .why-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .why-item p {
+        font-size: 1.1rem;
+    }
 }
 
 section {
