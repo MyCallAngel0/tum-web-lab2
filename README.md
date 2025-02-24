@@ -24,3 +24,7 @@ Here are some screenshots of the landing page:
 
 ### Details Section
 ![Details Section](screenshots/Details_Section.png)
+
+## Live Demo
+Check out the live demo of the landing page: [Live Demo](https://mycallangel0.github.io/tum-web-lab2/) 
+
