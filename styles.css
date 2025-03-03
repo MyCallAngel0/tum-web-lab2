@@ -421,6 +421,16 @@ position: relative;
     }
 }
 
+.mascot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
 footer {
     background-color: #ffcc00;
     padding: 20px;
