@@ -5,6 +5,11 @@ body {
     text-align: center;
 }
 
+section {
+    padding: 40px 20px;
+}
+
+/* Navigation Bar */
 header {
     background: #ffcc00;
     padding: 20px;
@@ -27,6 +32,7 @@ nav a:hover {
     transition: 0.3s;
 }
 
+/* Hero Section */
 .hero {
     background: url('https://www.girlscouts.org/content/dam/gsusa/images/cookie/find-cookies/25_CookieSeason_CookieFinder_1B_Hybrid_1920x450.jpg') no-repeat center center/cover;
     height: 300px;
@@ -69,26 +75,7 @@ nav a:hover {
     padding: 10px;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        height: 250px;
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .cta-button {
-        padding: 8px 18px;
-    }
-}
-
+/* Why Choose Us Section */
 #why-choose-us {
     background: url('https://www.example.com/your-image.jpg') no-repeat center center/cover;
     background-color: #f2e2c4;
@@ -150,29 +137,7 @@ nav a:hover {
     color: #6c6666;
 }
 
-@media (max-width: 768px) {
-    #why-choose-us h1 {
-        font-size: 2.5rem;
-    }
-
-    .why-item {
-        padding: 20px;
-    }
-
-    .why-item h3 {
-        font-size: 1.8rem;
-    }
-
-    .why-item p {
-        font-size: 1.1rem;
-    }
-}
-
-
-section {
-    padding: 40px 20px;
-}
-
+/* Products Section */
 #products {
     background-color: #f2e2c4;
     padding: 60px 20px;
@@ -247,25 +212,7 @@ section {
     background-color: #cc5200;
 }
 
-@media (max-width: 768px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .product-item h3 {
-        font-size: 1.2rem;
-        color: #fc893d;
-        margin-bottom: 3px;
-    }
-
-    .product-item p {
-        font-size: 1rem;
-    }
-    .product-button {
-        font-size: 1rem;
-    }
-}
-
+/* Details Section */
 #details {
     background-color: #eedfc1;
     padding: 60px 20px;
@@ -325,21 +272,7 @@ section {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    #details h1 {
-        font-size: 2.5rem;
-    }
-
-    .details-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info {
-        max-width: 90%;
-    }
-}
-
+/* Install our app Banner */
 .close-checkbox {
     display: none;
 }
@@ -414,13 +347,92 @@ position: relative;
     pointer-events: none;
     display: none;
 }
+
+/* Mascot */
+.mascot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+    opacity: 0;
+    animation: appear 2s ease-in-out 3s forwards, float 3s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+
+.mascot img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
   
-@media (max-width: 768px) {
-    .app-install {
-      display: block;
+  .mascot:hover img {
+    transform: rotate(-10deg) scale(1.2);
+  }
+  
+  .mascot-message {
+    position: absolute;
+    top: -100px;
+    right: 0; 
+    max-width: 200px;
+    padding: 10px;
+    background: #ffc107;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    animation: bounce 1.5s infinite alternate;
+  }
+  
+  .mascot-message::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ffc107;
+  }
+  
+  .mascot:hover .mascot-message {
+    display: block;
+  }
+
+@keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
 }
 
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+} 
+
+/* Footer */
 footer {
     background-color: #ffcc00;
     padding: 20px;
@@ -428,4 +440,78 @@ footer {
     text-align: center;
     font-weight: bold;
     margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .cta-button {
+        padding: 8px 18px;
+    }
+    /* Why Section */
+    #why-choose-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .why-item {
+        padding: 20px;
+    }
+
+    .why-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .why-item p {
+        font-size: 1.1rem;
+    }
+
+    /* Products Section */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-item h3 {
+        font-size: 1.2rem;
+        color: #fc893d;
+        margin-bottom: 3px;
+    }
+
+    .product-item p {
+        font-size: 1rem;
+    }
+    .product-button {
+        font-size: 1rem;
+    }
+
+    /* Details Section */
+    #details h1 {
+        font-size: 2.5rem;
+    }
+
+    .details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        max-width: 90%;
+    }
+
+    /* Install out app Banner */
+    .app-install {
+        display: block;
+    }
 }
